@@ -63,7 +63,6 @@ export const loginWithEmailPassword = async ({ email: emailRec, password }) => {
 	//! signInWithEmailAndPassword
 	try {
 		const resp = await signInWithEmailAndPassword(firebaseAuth, emailRec, password);
-		console.log(resp);
 		const { displayName, email: email, photoURL, uid } = resp.user;
 
 		return {
